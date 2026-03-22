@@ -1,0 +1,27 @@
+title: Marvelous Blocks
+description: Follow Andreas Willich in the hunt for every Iron Man armor related LEGO minifig.
+author: Andreas Willich
+lang: en
+url: ""
+baseurl: ""
+permalink: pretty
+
+social:
+  handle: marvelousblocks
+  links:
+    youtube: https://www.youtube.com/@marvelousblocks
+    twitter: https://x.com/marvelousblocks
+    bluesky: https://bsky.app/profile/marvelousblocks.bsky.social
+    tiktok: https://www.tiktok.com/@marvelousblocks
+    instagram: https://www.instagram.com/marvelousblocks/
+    threads: https://www.threads.net/@marvelousblocks
+
+navigation:
+  - title: Home
+    url: /
+  - title: Minifigs
+    url: /minifigs/
+  - title: Impressum
+    url: /impressum/
+  - title: Privacy
+    url: /privacy/

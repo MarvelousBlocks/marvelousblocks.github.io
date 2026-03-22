@@ -1,0 +1,9 @@
+{% assign links = site.social.links %}
+<ul class="social-links">
+  {% if links.youtube %}<li><a href="{{ links.youtube }}" rel="noopener noreferrer" target="_blank">YouTube</a></li>{% endif %}
+  {% if links.twitter %}<li><a href="{{ links.twitter }}" rel="noopener noreferrer" target="_blank">Twitter/X</a></li>{% endif %}
+  {% if links.bluesky %}<li><a href="{{ links.bluesky }}" rel="noopener noreferrer" target="_blank">Bluesky</a></li>{% endif %}
+  {% if links.tiktok %}<li><a href="{{ links.tiktok }}" rel="noopener noreferrer" target="_blank">TikTok</a></li>{% endif %}
+  {% if links.instagram %}<li><a href="{{ links.instagram }}" rel="noopener noreferrer" target="_blank">Instagram</a></li>{% endif %}
+  {% if links.threads %}<li><a href="{{ links.threads }}" rel="noopener noreferrer" target="_blank">Threads</a></li>{% endif %}
+</ul>

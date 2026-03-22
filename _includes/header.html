@@ -1,0 +1,15 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <img src="{{ '/assets/images/logo-small.png' | relative_url }}" alt="Marvelous Blocks logo" width="56" height="56">
+      <span>{{ site.title }}</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <ul>
+        {% for item in site.navigation %}
+          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>
