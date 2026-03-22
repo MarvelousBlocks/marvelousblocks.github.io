@@ -2,6 +2,20 @@
 
 Jekyll-based website for Marvelous Blocks, hosted on GitHub Pages.
 
+## Domain and deployment
+
+- Production URL: `https://marvelousblocks.com`
+- Custom domain is configured via `CNAME`.
+- GitHub Actions workflow for build/deploy: `.github/workflows/deploy.yml`
+
+### GitHub repository settings required
+
+1. In `Settings -> Pages`, set `Source` to `GitHub Actions`.
+2. Ensure your DNS points to GitHub Pages:
+   - Apex `A` records to: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - `www` CNAME to: `marvelousblocks.com` (or `<your-user>.github.io`)
+3. Enable `Enforce HTTPS` in Pages once DNS is active.
+
 ## Local development
 
 1. Install Ruby and Bundler.
