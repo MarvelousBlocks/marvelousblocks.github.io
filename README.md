@@ -37,7 +37,26 @@ bundle exec jekyll serve
 
 - Main pages are markdown files (`index.md`, `minifigs.md`, `mocs.md`, `impressum.md`, `privacy.md`).
 - Social links are defined once in `_config.yml` under `social.links`.
-- Minifig entries are stored in `_data/minifigs.json`.
+- Minifig pages are collection files in `_minifigs/` and render at `/minifigs/<bricklink-id>/`.
+
+### Adding a Minifig
+
+Each minifig is one markdown file in `_minifigs/` and renders at `/minifigs/<bricklink-id>/`.
+The `Minifigs` overview page at `/minifigs/` lists all minifigs that provide at least one
+image, ordered by BrickLink ID.
+
+1. Copy `_templates/minifig.md` into `_minifigs/` (create the directory on first use) and
+   rename it to the BrickLink ID, for example `_minifigs/sh0015.md`.
+2. Fill in the front matter fields: `title`, `bricklink_id` (must match the file name), and
+   `images`. The image list is required: a minifig without an image is not displayed on the
+   overview. Optionally add `youtube_url`, `brickset_url`, and `brickeconomy_url`.
+3. Store the minifig's photos under `assets/images/minifigs/<bricklink-id>/` and reference
+   them in the `images` list, for example `/assets/images/minifigs/sh0015/sh0015_1.jpg`.
+4. Write the description below the front matter. The page layout, the `All Minifigs` back
+   link, the image gallery, and the BrickLink link are added automatically.
+5. Preview locally with `bundle exec jekyll serve`, then commit.
+
+`_templates/minifig.md` is never published; only files in `_minifigs/` become minifig pages.
 
 ### Adding a MOC
 

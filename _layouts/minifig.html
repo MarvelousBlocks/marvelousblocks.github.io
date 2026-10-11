@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<article class="minifig-article">
+  <p class="minifig-back"><a href="{{ '/minifigs/' | relative_url }}">All Minifigs</a></p>
+  <h1>{{ page.title }}</h1>
+  <p class="minifig-id">{{ page.bricklink_id }}</p>
+  {% if page.images.size > 0 %}
+  <section class="minifig-gallery" aria-label="Photos of {{ page.title }}">
+    {% for image in page.images %}
+    <img src="{{ image | relative_url }}" alt="{{ page.title }} (photo {{ forloop.index }})" loading="lazy">
+    {% endfor %}
+  </section>
+  {% endif %}
+  {{ content }}
+  <section class="minifig-links" aria-label="External references">
+    <h2>Links</h2>
+    <ul>
+      <li><a href="https://www.bricklink.com/v2/catalog/catalogitem.page?M={{ page.bricklink_id }}" target="_blank" rel="noopener noreferrer">BrickLink</a></li>
+      {% if page.youtube_url %}
+      <li><a href="{{ page.youtube_url }}" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+      {% endif %}
+      {% if page.brickset_url %}
+      <li><a href="{{ page.brickset_url }}" target="_blank" rel="noopener noreferrer">Brickset</a></li>
+      {% endif %}
+      {% if page.brickeconomy_url %}
+      <li><a href="{{ page.brickeconomy_url }}" target="_blank" rel="noopener noreferrer">Brickeconomy</a></li>
+      {% endif %}
+    </ul>
+  </section>
+</article>

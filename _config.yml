@@ -31,6 +31,8 @@ navigation:
 collections:
   mocs:
     output: true
+  minifigs:
+    output: true
 
 defaults:
   - scope:
@@ -38,3 +40,9 @@ defaults:
       type: mocs
     values:
       layout: moc
+
+  - scope:
+      path: ""
+      type: minifigs
+    values:
+      layout: minifig
