@@ -321,15 +321,6 @@ body {
   border-top: 1px solid var(--line);
   background: #fff9ef;
   padding: 1.2rem 0;
-
-  .moc-card a {
-    grid-template-columns: 72px 1fr;
-  }
-
-  .moc-card img {
-    width: 72px;
-    height: 72px;
-  }
 }
 
 .footer-inner {
@@ -404,6 +395,15 @@ button:focus-visible {
   }
 
   .minifig-card img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .moc-card a {
+    grid-template-columns: 72px 1fr;
+  }
+
+  .moc-card img {
     width: 72px;
     height: 72px;
   }
