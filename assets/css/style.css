@@ -15,6 +15,10 @@
 
 body {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
   font-family: "Segoe UI", "Trebuchet MS", sans-serif;
   color: var(--ink);
   background: radial-gradient(circle at top, #fff7ea 0%, var(--bg) 55%);
@@ -83,6 +87,7 @@ body {
 }
 
 .site-main {
+  flex: 1 0 auto;
   padding: 1.6rem 0 3rem;
 }
 
