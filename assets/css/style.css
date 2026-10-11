@@ -8,6 +8,7 @@
   --accent-2: #f0b429;
   --line: #e4e4e0;
   --bar: #141519;
+  --bar-muted: #a6adb8;
   --shadow: 0 10px 20px rgba(31, 35, 43, 0.08);
 }
 
@@ -43,7 +44,7 @@ h1 {
   top: 0;
   z-index: 5;
   border-bottom: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.94);
+  background: var(--bar);
   backdrop-filter: blur(8px);
 }
 
@@ -60,13 +61,15 @@ h1 {
   align-items: center;
   gap: 0.7rem;
   text-decoration: none;
-  color: var(--ink);
+  color: #fff;
   font-weight: 700;
 }
 
 .brand img {
   display: block;
   border-radius: 8px;
+  background: #fff;
+  padding: 3px;
 }
 
 .site-nav ul {
@@ -84,14 +87,14 @@ h1 {
   padding: 0.35rem 0.7rem;
   border-radius: 999px;
   text-decoration: none;
-  color: var(--ink);
+  color: #fff;
   border: 1px solid transparent;
 }
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
-  border-color: var(--line);
-  background: var(--panel);
+  border-color: var(--accent);
+  background: var(--accent);
 }
 
 .site-main {
@@ -324,7 +327,7 @@ h1 {
 
 .site-footer {
   border-top: 1px solid var(--line);
-  background: var(--panel);
+  background: var(--bar);
   padding: 1.2rem 0;
 }
 
@@ -339,6 +342,7 @@ h1 {
 .footer-title {
   margin: 0 0 0.5rem;
   font-weight: 700;
+  color: #fff;
 }
 
 .footer-meta {
@@ -348,7 +352,7 @@ h1 {
 }
 
 .footer-meta a {
-  color: var(--muted);
+  color: var(--bar-muted);
 }
 
 .social-links {
@@ -362,9 +366,9 @@ h1 {
 
 .social-links a {
   text-decoration: none;
-  color: var(--ink);
-  background: var(--panel);
-  border: 1px solid var(--line);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 999px;
   padding: 0.34rem 0.7rem;
   font-size: 0.94rem;
@@ -373,6 +377,7 @@ h1 {
 .social-links a:hover,
 .social-links a:focus-visible {
   border-color: var(--accent);
+  background: var(--accent);
 }
 
 a {
