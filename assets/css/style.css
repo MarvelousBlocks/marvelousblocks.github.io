@@ -68,7 +68,7 @@ h1 {
 .brand img {
   display: block;
   border-radius: 8px;
-  background: #fff;
+  background: var(--panel);
   padding: 3px;
 }
 
