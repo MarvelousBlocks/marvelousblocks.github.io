@@ -151,9 +151,9 @@ h1 {
 }
 
 .hero-copy .button {
-  background: #fff;
+  background: var(--panel);
   color: var(--accent);
-  border-color: #fff;
+  border-color: var(--panel);
 }
 
 .hero-copy .button:hover,
