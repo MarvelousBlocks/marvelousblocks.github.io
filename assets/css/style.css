@@ -45,7 +45,6 @@ h1 {
   z-index: 5;
   border-bottom: 1px solid var(--line);
   background: var(--bar);
-  backdrop-filter: blur(8px);
 }
 
 .header-inner {
