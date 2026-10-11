@@ -21,6 +21,12 @@ body {
   line-height: 1.5;
 }
 
+h1 {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
 .container {
   width: min(1100px, 100% - 2rem);
   margin: 0 auto;
@@ -128,6 +134,7 @@ body {
   border: 1px solid #991717;
   padding: 0.55rem 1rem;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .button:hover,
