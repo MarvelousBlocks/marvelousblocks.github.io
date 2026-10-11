@@ -35,7 +35,7 @@ bundle exec jekyll serve
 
 ## Content editing
 
-- Main pages are markdown files (`index.md`, `minifigs.md`, `impressum.md`, `privacy.md`).
+- Main pages are markdown files (`index.md`, `minifigs.md`, `mocs.md`, `impressum.md`, `privacy.md`).
 - Social links are defined once in `_config.yml` under `social.links`.
 - Minifig entries are stored in `_data/minifigs.json`.
 
