@@ -107,8 +107,8 @@ h1 {
 }
 
 .hero-copy {
-  background: var(--panel);
-  border: 1px solid var(--line);
+  background: var(--accent);
+  border: 1px solid var(--accent-deep);
   border-radius: 18px;
   padding: 1rem 1.1rem 1.2rem;
   box-shadow: var(--shadow);
@@ -116,7 +116,7 @@ h1 {
 
 .eyebrow {
   margin: 0;
-  color: var(--muted);
+  color: var(--ink);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   font-size: 0.82rem;
@@ -126,6 +126,7 @@ h1 {
   margin: 0.35rem 0 0.45rem;
   font-size: clamp(1.8rem, 4.5vw, 3rem);
   line-height: 1.1;
+  color: #fff;
 }
 
 .hero-actions {
@@ -147,6 +148,17 @@ h1 {
 .button:hover,
 .button:focus-visible {
   background: var(--accent-deep);
+}
+
+.hero-copy .button {
+  background: #fff;
+  color: var(--accent);
+  border-color: #fff;
+}
+
+.hero-copy .button:hover,
+.hero-copy .button:focus-visible {
+  color: var(--accent-deep);
 }
 
 .hero-art {
