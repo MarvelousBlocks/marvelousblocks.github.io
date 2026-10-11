@@ -10,13 +10,11 @@ description: Marvelous Blocks follows Andreas Willich in the hunt for every Iron
     <h1>The Iron Man Minifig Hunt</h1>
     <p>
       Welcome to Marvelous Blocks, the YouTube channel where I track down every Iron Man armor related LEGO minifig.
-      Follow the mission, check the current list, and join the hunt.
+      Follow the mission and browse the Minifig collection.
     </p>
     <p class="hero-actions">
-      <a class="button" href="{{ '/minifigs/' | relative_url }}">See The Minifig List</a>
+      <a class="button" href="{{ '/minifigs/' | relative_url }}">See the Minifig collection</a>
     </p>
-    <h2>Follow on Social Media</h2>
-    {% include social-links.html %}
   </div>
   <div class="hero-art">
     <img src="{{ '/assets/images/logo-big.png' | relative_url }}" alt="Marvelous Blocks logo artwork" width="640" height="640">

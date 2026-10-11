@@ -23,10 +23,6 @@ navigation:
     url: /minifigs/
   - title: MOCs
     url: /mocs/
-  - title: Impressum
-    url: /impressum/
-  - title: Privacy
-    url: /privacy/
 
 collections:
   mocs:
