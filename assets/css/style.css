@@ -1,11 +1,13 @@
 :root {
-  --bg: #f7f2e8;
-  --panel: #fffaf2;
+  --bg: #f7f7f4;
+  --panel: #ffffff;
   --ink: #1f232b;
   --muted: #5f6670;
-  --accent: #ba1f1f;
+  --accent: #ed1d24;
+  --accent-deep: #8d1212;
   --accent-2: #f0b429;
-  --line: #e7dac6;
+  --line: #e4e4e0;
+  --bar: #141519;
   --shadow: 0 10px 20px rgba(31, 35, 43, 0.08);
 }
 
@@ -17,7 +19,7 @@ body {
   margin: 0;
   font-family: "Segoe UI", "Trebuchet MS", sans-serif;
   color: var(--ink);
-  background: radial-gradient(circle at top, #fff7ea 0%, var(--bg) 55%);
+  background: var(--bg);
   line-height: 1.5;
 }
 
@@ -31,7 +33,7 @@ body {
   top: 0;
   z-index: 5;
   border-bottom: 1px solid var(--line);
-  background: rgba(255, 250, 242, 0.94);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(8px);
 }
 
@@ -79,7 +81,7 @@ body {
 .site-nav a:hover,
 .site-nav a:focus-visible {
   border-color: var(--line);
-  background: #fff;
+  background: var(--panel);
 }
 
 .site-main {
@@ -125,21 +127,21 @@ body {
   text-decoration: none;
   background: var(--accent);
   color: #fff;
-  border: 1px solid #991717;
+  border: 1px solid var(--accent-deep);
   padding: 0.55rem 1rem;
   font-weight: 700;
 }
 
 .button:hover,
 .button:focus-visible {
-  background: #8f1717;
+  background: var(--accent-deep);
 }
 
 .hero-art {
   padding: 0.7rem;
   border-radius: 18px;
   border: 1px solid var(--line);
-  background: linear-gradient(160deg, #fff7e8 0%, #f4e7d0 100%);
+  background: linear-gradient(160deg, var(--panel) 0%, var(--bg) 100%);
   box-shadow: var(--shadow);
 }
 
@@ -162,7 +164,7 @@ body {
   height: 100%;
   border: 1px solid var(--line);
   border-radius: 14px;
-  background: #fff;
+  background: var(--panel);
   padding: 0.7rem;
   box-shadow: var(--shadow);
   text-decoration: none;
@@ -178,7 +180,7 @@ body {
   width: 80px;
   height: 80px;
   object-fit: cover;
-  background: #f8f8f8;
+  background: var(--bg);
   border-radius: 10px;
 }
 
@@ -198,7 +200,7 @@ body {
   margin: 1rem 0;
   border: 1px dashed var(--line);
   border-radius: 14px;
-  background: #fff;
+  background: var(--panel);
   padding: 1rem;
   color: var(--muted);
 }
@@ -226,7 +228,7 @@ body {
   object-fit: cover;
   border-radius: 10px;
   border: 1px solid var(--line);
-  background: #f8f8f8;
+  background: var(--bg);
 }
 
 .minifig-links ul {
@@ -249,7 +251,7 @@ body {
   height: 100%;
   border: 1px solid var(--line);
   border-radius: 14px;
-  background: #fff;
+  background: var(--panel);
   padding: 0.7rem;
   box-shadow: var(--shadow);
   text-decoration: none;
@@ -266,7 +268,7 @@ body {
   height: 96px;
   object-fit: cover;
   border-radius: 10px;
-  background: #f8f8f8;
+  background: var(--bg);
 }
 
 .moc-card h2 {
@@ -284,7 +286,7 @@ body {
   margin: 1rem 0;
   border: 1px dashed var(--line);
   border-radius: 14px;
-  background: #fff;
+  background: var(--panel);
   padding: 1rem;
   color: var(--muted);
 }
@@ -309,7 +311,7 @@ body {
 
 .site-footer {
   border-top: 1px solid var(--line);
-  background: #fff9ef;
+  background: var(--panel);
   padding: 1.2rem 0;
 }
 
@@ -348,7 +350,7 @@ body {
 .social-links a {
   text-decoration: none;
   color: var(--ink);
-  background: #fff;
+  background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 999px;
   padding: 0.34rem 0.7rem;
@@ -361,7 +363,7 @@ body {
 }
 
 a {
-  color: #8d1212;
+  color: var(--accent-deep);
 }
 
 a:focus-visible,
