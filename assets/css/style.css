@@ -244,6 +244,79 @@ body {
   color: #9b6d0b;
 }
 
+.moc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.moc-card a {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 0.8rem;
+  align-items: center;
+  height: 100%;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  padding: 0.7rem;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.moc-card a:hover,
+.moc-card a:focus-visible {
+  border-color: var(--accent);
+}
+
+.moc-card img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #f8f8f8;
+}
+
+.moc-card h2 {
+  margin: 0.2rem 0;
+  font-size: 1rem;
+}
+
+.moc-card p {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.moc-empty {
+  margin: 1rem 0;
+  border: 1px dashed var(--line);
+  border-radius: 14px;
+  background: #fff;
+  padding: 1rem;
+  color: var(--muted);
+}
+
+.moc-article {
+  max-width: 760px;
+}
+
+.moc-back {
+  margin: 0 0 0.5rem;
+  font-size: 0.94rem;
+}
+
+.moc-article img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0.5rem 0;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+}
+
 .site-footer {
   border-top: 1px solid var(--line);
   background: #fff9ef;
@@ -322,6 +395,15 @@ button:focus-visible {
   }
 
   .minifig-card img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .moc-card a {
+    grid-template-columns: 72px 1fr;
+  }
+
+  .moc-card img {
     width: 72px;
     height: 72px;
   }

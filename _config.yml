@@ -21,7 +21,20 @@ navigation:
     url: /
   - title: Minifigs
     url: /minifigs/
+  - title: MOCs
+    url: /mocs/
   - title: Impressum
     url: /impressum/
   - title: Privacy
     url: /privacy/
+
+collections:
+  mocs:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: mocs
+    values:
+      layout: moc
