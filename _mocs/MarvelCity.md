@@ -1,6 +1,7 @@
 ---
-# Copy this file into the _mocs/ directory and rename it, for example:
-#   _mocs/my-awesome-build.md
+# Copy this file into _mocs/ and use CamelCase with an initial capital:
+#   _mocs/MyAwesomeBuild.md
+# Use only ASCII letters and digits in the file stem; no special characters.
 # Then fill in the fields below. Do not edit this template in place.
 #
 # title:       Name of the MOC, shown on the overview card and the page.

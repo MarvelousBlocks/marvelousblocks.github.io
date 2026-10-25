@@ -8,6 +8,29 @@ Jekyll-based website for Marvelous Blocks, hosted on GitHub Pages.
 - Custom domain is configured via `CNAME`.
 - GitHub Actions workflow for build/deploy: `.github/workflows/deploy.yml`
 
+### Image metadata privacy
+
+After Jekyll builds the site, the workflow uses ExifTool to strip metadata from JPEG,
+PNG, WebP and GIF images throughout `_site`, before uploading the Pages artifact.
+This removes GPS coordinates, capture dates, camera details, author information,
+comments and embedded thumbnails. Orientation is retained so portrait photos display
+correctly. Images are not recompressed, and source files in the repository are unchanged.
+Metadata removal errors stop the build and prevent deployment. This does not remove
+personal information visible in the image itself or from the repository's history.
+
+To run the same cleanup locally, install ExifTool, then run:
+
+```bash
+bundle exec jekyll build
+bash .github/scripts/strip-image-metadata.sh _site
+```
+
+The integration tests require Python 3, Bash and ExifTool:
+
+```bash
+python3 -m unittest discover -s .github/tests -v
+```
+
 ### GitHub repository settings required
 
 1. In `Settings -> Pages`, set `Source` to `GitHub Actions`.
@@ -64,8 +87,9 @@ Each MOC is one markdown file in `_mocs/` and renders at `/mocs/<file-name>/`.
 The `MOCs` overview page at `/mocs/` lists all MOCs automatically, ordered by
 the `order` field.
 
-1. Copy `_templates/moc.md` into `_mocs/` and rename it, for example
-   `_mocs/my-awesome-build.md`.
+1. Copy `_templates/moc.md` into `_mocs/` and name it in CamelCase with an initial
+   capital, for example `_mocs/MyAwesomeBuild.md`. Use only ASCII letters and digits
+   in the file stem; no spaces, hyphens, underscores or other special characters.
 2. Fill in the front matter fields: `title`, `description`, `image`, `order`.
 3. Store the MOC's images under `assets/images/mocs/` and reference them in the
    markdown, for example `![Section 1](/assets/images/mocs/section-1.jpg)`.
