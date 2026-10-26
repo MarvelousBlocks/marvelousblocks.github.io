@@ -101,40 +101,6 @@ h1 {
   padding: 1.6rem 0 3rem;
 }
 
-.hero {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 1.3rem;
-  align-items: center;
-}
-
-.hero-copy {
-  background: var(--accent);
-  border: 1px solid var(--accent-deep);
-  border-radius: 18px;
-  padding: 1rem 1.1rem 1.2rem;
-  box-shadow: var(--shadow);
-}
-
-.eyebrow {
-  margin: 0;
-  color: var(--ink);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-size: 0.82rem;
-}
-
-.hero h1 {
-  margin: 0.35rem 0 0.45rem;
-  font-size: clamp(1.8rem, 4.5vw, 3rem);
-  line-height: 1.1;
-  color: #fff;
-}
-
-.hero-actions {
-  margin: 1rem 0;
-}
-
 .button {
   display: inline-block;
   border-radius: 999px;
@@ -150,25 +116,6 @@ h1 {
 .button:hover,
 .button:focus-visible {
   background: var(--accent-deep);
-}
-
-.hero-copy .button {
-  background: var(--panel);
-  color: var(--accent);
-  border-color: var(--panel);
-}
-
-.hero-copy .button:hover,
-.hero-copy .button:focus-visible {
-  color: var(--accent-deep);
-}
-
-.hero-art {
-  padding: 0.7rem;
-  border-radius: 18px;
-  border: 1px solid var(--line);
-  background: linear-gradient(160deg, var(--panel) 0%, var(--bg) 100%);
-  box-shadow: var(--shadow);
 }
 
 .hero-art img {
@@ -376,13 +323,23 @@ h1 {
 }
 
 .social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
   text-decoration: none;
   color: #fff;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 999px;
-  padding: 0.34rem 0.7rem;
-  font-size: 0.94rem;
+  border-radius: 50%;
+}
+
+.social-links svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
 }
 
 .social-links a:hover,
@@ -405,10 +362,6 @@ button:focus-visible {
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .hero {
-    grid-template-columns: 1fr;
   }
 
   .minifig-card a {
