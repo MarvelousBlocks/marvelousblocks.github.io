@@ -118,6 +118,11 @@ h1 {
   background: var(--accent-deep);
 }
 
+.hero-art {
+  /* Halbe Logohöhe, proportional zur Inhaltsbreite (Bildformat 2560 × 388). */
+  padding-top: calc(100% * 388 / 2560 / 2);
+}
+
 .hero-art img {
   width: 100%;
   height: auto;
