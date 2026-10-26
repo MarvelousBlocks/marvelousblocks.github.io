@@ -5,5 +5,5 @@ description: Marvelous Blocks follows Andreas Willich in the hunt for every Iron
 ---
 
 <div class="hero-art">
-  <img src="{{ '/assets/images/logo-big.png' | relative_url }}" alt="Marvelous Blocks logo artwork" width="640" height="640">
+  <img src="{{ '/assets/images/logo-big.png' | relative_url }}" alt="Marvelous Blocks logo artwork" width="2560" height="388">
 </div>
