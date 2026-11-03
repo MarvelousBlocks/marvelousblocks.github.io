@@ -72,7 +72,8 @@ image, ordered by BrickLink ID.
    rename it to the BrickLink ID, for example `_minifigs/sh0015.md`.
 2. Fill in the front matter fields: `title`, `bricklink_id` (must match the file name), and
    `images`. The image list is required: a minifig without an image is not displayed on the
-   overview. Optionally add `youtube_url`, `brickset_url`, and `brickeconomy_url`.
+   overview. Optionally add `youtube_url`, `brickset_url`, `brickeconomy_url`, and
+   `brickowl_url`.
 3. Store the minifig's photos under `assets/images/minifigs/<bricklink-id>/` and reference
    them in the `images` list, for example `/assets/images/minifigs/sh0015/sh0015_1.jpg`.
 4. Write the description below the front matter. The page layout, the `All Minifigs` back

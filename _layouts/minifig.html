@@ -6,27 +6,34 @@ layout: default
   <p class="minifig-back"><a href="{{ '/minifigs/' | relative_url }}">All Minifigs</a></p>
   <h1>{{ page.title }}</h1>
   <p class="minifig-id">{{ page.bricklink_id }}</p>
+  {{ content }}
   {% if page.images.size > 0 %}
-  <section class="minifig-gallery" aria-label="Photos of {{ page.title }}">
+  <section class="minifig-gallery moc-gallery" aria-label="Photos of {{ page.title | escape }}">
     {% for image in page.images %}
-    <img src="{{ image | relative_url }}" alt="{{ page.title }} (photo {{ forloop.index }})" loading="lazy">
+    <a href="{{ image | relative_url }}" aria-label="Open photo {{ forloop.index }}: {{ page.title | escape }}">
+      <img src="{{ image | relative_url }}" alt="{{ page.title | escape }} (photo {{ forloop.index }})" loading="lazy" decoding="async">
+    </a>
     {% endfor %}
   </section>
   {% endif %}
-  {{ content }}
   <section class="minifig-links" aria-label="External references">
-    <h2>Links</h2>
+    <h2>Find this minifigure</h2>
     <ul>
-      <li><a href="https://www.bricklink.com/v2/catalog/catalogitem.page?M={{ page.bricklink_id }}" target="_blank" rel="noopener noreferrer">BrickLink</a></li>
+      <li><a href="https://www.bricklink.com/v2/catalog/catalogitem.page?M={{ page.bricklink_id }}" target="_blank" rel="noopener noreferrer"><strong>BrickLink <span aria-hidden="true">&nearr;</span></strong><span>Catalog &middot; {{ page.bricklink_id | escape }}</span></a></li>
       {% if page.youtube_url %}
-      <li><a href="{{ page.youtube_url }}" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+      <li><a href="{{ page.youtube_url }}" target="_blank" rel="noopener noreferrer"><strong>YouTube <span aria-hidden="true">&nearr;</span></strong><span>Watch the video</span></a></li>
       {% endif %}
       {% if page.brickset_url %}
-      <li><a href="{{ page.brickset_url }}" target="_blank" rel="noopener noreferrer">Brickset</a></li>
+      <li><a href="{{ page.brickset_url }}" target="_blank" rel="noopener noreferrer"><strong>Brickset <span aria-hidden="true">&nearr;</span></strong><span>Minifigure reference</span></a></li>
       {% endif %}
       {% if page.brickeconomy_url %}
-      <li><a href="{{ page.brickeconomy_url }}" target="_blank" rel="noopener noreferrer">Brickeconomy</a></li>
+      <li><a href="{{ page.brickeconomy_url }}" target="_blank" rel="noopener noreferrer"><strong>BrickEconomy <span aria-hidden="true">&nearr;</span></strong><span>Minifigure reference</span></a></li>
+      {% endif %}
+      {% if page.brickowl_url %}
+      <li><a href="{{ page.brickowl_url }}" target="_blank" rel="noopener noreferrer"><strong>BrickOwl <span aria-hidden="true">&nearr;</span></strong><span>Minifigure catalog</span></a></li>
       {% endif %}
     </ul>
   </section>
 </article>
+
+{% include photo-viewer.html %}

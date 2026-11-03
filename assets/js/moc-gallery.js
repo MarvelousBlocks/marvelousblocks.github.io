@@ -1,5 +1,5 @@
 (() => {
-  const article = document.querySelector('.moc-article');
+  const article = document.querySelector('.moc-article, .minifig-article');
   const dialog = document.querySelector('.moc-lightbox');
   if (!article || !dialog) return;
 
