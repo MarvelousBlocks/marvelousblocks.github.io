@@ -403,6 +403,17 @@ body:has(.moc-lightbox[open]) {
   color: var(--bar-muted);
 }
 
+.footer-image-license {
+  flex-basis: 100%;
+  margin: 0;
+  color: var(--bar-muted);
+  font-size: 0.86rem;
+}
+
+.footer-image-license a {
+  color: inherit;
+}
+
 .social-links {
   margin: 0;
   padding: 0;
